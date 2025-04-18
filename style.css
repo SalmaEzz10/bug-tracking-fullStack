@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color-black: black;
+    --color-white: white;
+    --color-sec:  #FFF0E9 ;
+    --color-foot: #0c0c0c;
+}
+/* display */
+#login{
+    display: none;
+    margin-top: 10%;
+}
+#register , #customer , #customerplace {
+    display: block;
+}
+#enter{
+    display: block;
+}
+#main , #footer , #stuff , #listStaff , #listAdmin , #listCustomer{
+    display: none;
+}
+/*customer*/
+.total{
+    background-color: var(--color-sec);
+}
+.areaProblem{
+    border-radius: 5px;
+    height: 70%;
+    width: 45%;
+}
+.customer{
+        height: 380px;
+        text-align: center;
+        color: var(--color-black);
+}
+.problem {
+    margin-left: 34%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 30%;
+
+}
+.problem input{
+    border-radius: 3px;
+    height: 40px;
+    width: 80%;
+    margin-left: 5%;
+}
+/* .problem{
+     
+} */
+/* ------------------------------------------------------------------------------------------------- */
+/* Enter ==> register , login */
+.enter{
+    background-color: rgba(241, 241, 241, 0.904);
+    display: none;
+}
+.l-s , .l1-s{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: green;
+}
+.innn {
+    border: 0;
+    padding: 18px;
+    width: 350px;
+    height: 30px;
+    border-bottom: 3px solid #000000;
+    border-radius: 4px;
+}
+.f-up{
+
+    margin:0% 35%;
+    width: 400px;
+    padding: 30px;
+   box-shadow: 3px 6px 6px rgb(148, 148, 148);
+   border-radius: 10px;
+}
+.btnsum , .btnlog{
+    border: 0;
+    padding: 2px;
+    width: 250px;
+    height: 40px;
+    margin-left: 13%;
+    border-radius: 10px;
+    text-align: center;
+    background-color: green;
+    color: var(--color-white);
+    font-size: 18px;
+
+}
+.btnlog{
+    background-color: blue;
+}
+.co-s , .l1-s{
+    color: blue;
+    
+}
+
+/*--------------------------------------------------------------------*/
+/* footer*/
+footer{
+    background-color: var(--color-foot);
+}
+.rights{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    justify-content: center;
+    background-color: var(--color-black);
+}
+footer p{
+    color: gray;
+    font-size: 13px;
+    margin: 0;
+}
+.pp{
+    font-weight: 500;
+    color: var(--color-white);
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+}
+.ico i{
+    font-size: 15px;
+    color: rgb(128, 128, 128);
+}

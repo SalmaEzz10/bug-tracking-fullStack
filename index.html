@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bug Tracking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="total">
+
+   <div id="enter"> 
+          <div class="register" id="register"> 
+            <fieldset class="f-up ">
+                <legend class="l-s">Register</legend>
+                <form action="" method="post" class="s-up" onsubmit="return avalid(event)">
+                    <h3 id="error"></h3>
+                    <label for="user name">User Name </label><br>
+                    <input type="text" placeholder="Enter full name" class="innn" id="username">
+                    <br><br>
+                    <label for="email">Email </label><br>
+                    <input type="email" placeholder="******@gmail.com" class="innn" id="mail">
+                    <br><br>
+                    <label for="pass">Password </label><br>
+                    <input type="password" placeholder="abc123#!AB" class="innn" id="pass">
+                    <br><br>
+                    <label for="pass">Confirm Password </label><br>
+                    <input type="password" class="innn" id="copass"><br><br>
+                    <select name="Role" id="role" style="display: block; width: 100%; height: 35px; border-radius: 5px;">
+                        <option value="Admin">Admin</option>
+                        <option value="Stuff">Staff</option>
+                        <option value="customer">customer</option>
+                    </select>
+                    <br><br>
+                    <input type="checkbox" name="conform" id="in">
+                    <label for="in">You agree to the store's <span class="co-s">terms of use</span> and <span
+                            class="co-s">privacy notice</span></label><br><br>
+                    <input type="submit" value="Sign Up" class="btnsum">
+                </form>
+            </fieldset>
+        </div> 
+
+         <div class="login" id="login">
+            <fieldset class="f-up ">
+                <legend class="l1-s">Log_In</legend>
+                <form action="" target="_blank" method="post" class="s-up" onsubmit="return log(event)">
+                    <h3 id="error"></h3>
+                    <label for="email">Email </label><br>
+                    <input type="email" placeholder="******@gmail.com" class="innn" id="mail">
+                    <br><br>
+                    <label for="pass">Password </label><br>
+                    <input type="password" placeholder="abc123#!AB" class="innn" id="pass">
+                    <br><br>
+                    <input type="submit" value="Log_In" id="bt" class="btnlog">
+                </form>
+            </fieldset>
+        </div>
+        </div> 
+
+
+    <main id="main">
+        <a class="btn btn-dark" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+            &#9776;
+          </a>        
+          <a onclick="darkMode()">&#9790;</a>
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasExampleLabel">MY Info</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <div>
+                Here is some information for you
+              </div>
+              <div class="dropdown mt-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" onclick="return upload()">
+                  Choose from the list
+                </button>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="listCustomer">
+                  <li><a class="dropdown-item" href="#">Chats</a></li>
+                  <li><a class="dropdown-item" href="#">Track bug status</a></li>
+                  <li><a class="dropdown-item" href="#">Log_out</a></li>
+                </ul>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="listStaff">
+                  <li><a class="dropdown-item" href="#">View bugs assigned to them</a></li>
+                  <li><a class="dropdown-item" href="#">Send solution messages directly to customer</a></li>
+                  <li><a class="dropdown-item" href="#">Reassign bugs to other staff members if more relevant</a></li>
+                  <li><a class="dropdown-item" href="#">View the case-flow and status of bugs they are involved in</a></li>
+                  <li><a class="dropdown-item" href="#">Log-out</a></li>
+                </ul>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="listAdmin">
+                  <li><a class="dropdown-item" href="#">Add staff member and project details</a></li>
+                  <li><a class="dropdown-item" href="#">View bug reports submitted by customer</a></li>
+                  <li><a class="dropdown-item" href="#">Assign bugs to one or more staff members</a></li>
+                  <li><a class="dropdown-item" href="#">view bug case-flow status and details</a></li>
+                  <li><a class="dropdown-item" href="#">Send messages to customer</a></li>
+                  <li><a class="dropdown-item" href="#">log-out</a></li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+
+        <section class="customer">
+          <textarea name="" id="textProblem" class="areaProblem"></textarea>
+           <div class="problem">
+           <input type="file" accept="image/*" id="customer">
+           <input class="in" type="text" name="" id="customerplace" placeholder="Enter you problem">
+           <input class="in" type="text" name="" id="stuff" placeholder="Enter your solution">
+           <button type="button" class="btn btn-dark ms-0" onclick="return upload()" id="btnsend">send</button>
+           </div>
+        </section>
+
+
+    </main>
+     <footer class="pt-5" id="footer">
+        <div class="row container-fluid pb-5">
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <!-- <img class="i-nav mb-4" id="imgg" src="Gallary/img04.png" alt=""> -->
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum recusandae dolorem minus doloremque enim.
+            </p>
+            <div class="mt-3 ico">
+              <i class="fab fa-facebook me-2"></i>
+              <i class="fab fa-twitter me-2"></i>
+              <i class="fab fa-linkedin me-2"></i>
+              <i class="fab fa-instagram"></i>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <p class="s-1-p pp">working hours</p>
+            <p>monday : 10AM - 9PM</p>
+            <p>tuesday : 10AM - 9PM</p>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <p class="s-1-p pp">where to find us</p>
+            <p>adress:juniper vally 17, new york</p>
+            <p>e-mail:rosebud@qodeinteractive.com</p>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <p class="s-1-p pp">follow our instagram</p>
+            <div class="row g-2">
+            </div>
+          </div>
+        </div>
+        <p class="rights">&#169;2018 qode interactive, all rights reserved</p>
+    </footer>   
+
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
